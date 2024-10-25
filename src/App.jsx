@@ -6,6 +6,8 @@ import { SpeechRecognition, useSpeechRecognition } from 'react-speech-kit';
 import { GoogleGenerativeAI } from "@google/generative-ai"; 
 import './App.css';
 
+import { useEffect } from 'react';
+
 function App() {
   const [count, setCount] = useState(0);
   const [fortune, setFortune] = useState("");  // State for storing the fortune
@@ -21,7 +23,8 @@ function App() {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = "You are a genie, Give a Funny Random and General Fortune in 2 or 3 lines for this fortune telling app ";
-
+    setFortune("Scanning...");
+    await new Promise(resolve => setTimeout(resolve, 3000));
     try {
       const result = await model.generateContent(prompt);
       const fortuneText = result.response.text();
