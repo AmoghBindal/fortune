@@ -98,7 +98,7 @@ function App() {
     const genAI = new GoogleGenerativeAI("AIzaSyAHcsRvq6KGZKAIeVAuVMRSmCCyHKRFOLw");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = "You are a genie, give a funny random and general fortune in 2 or 3 lines for this fortune telling app";
+    const prompt = "Generate a humorous roast about someone's future by pretending to be a fortune-teller machine that reads palms. The joke should playfully tease the person based on their habits or flaws, making it sound like their future success depends on overcoming them. Keep the tone light and fun, not mean-spirited. Keep it a one liner roast";
     setFortune("Scanning...");
     
     // Add a delay to simulate "thinking" before generating the fortune
