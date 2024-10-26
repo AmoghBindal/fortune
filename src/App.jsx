@@ -98,7 +98,7 @@ function App() {
     const genAI = new GoogleGenerativeAI("AIzaSyAHcsRvq6KGZKAIeVAuVMRSmCCyHKRFOLw");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = "Generate a humorous roast about someone's future by pretending to be a fortune-teller machine that reads palms. The joke should playfully tease the person based on their habits or flaws, making it sound like their future success depends on overcoming them. Keep the tone light and fun, not mean-spirited. Keep it a one liner roast";
+    const prompt = "Write a humorous, one-liner roast from the perspective of a palm reader, aimed at an Indian engineering student. The roast should tease common stereotypes about engineering students, including but not restricted to not studying, being single(not finding a partner), bad habits, coding skills, bad future, body shaming, etc . Be hard and funny.";
     setFortune("Scanning...");
     
     // Add a delay to simulate "thinking" before generating the fortune
